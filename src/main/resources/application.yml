@@ -1,0 +1,38 @@
+spring:
+  datasource:
+    url: "jdbc:mysql://localhost:3306/food_delivery_system"
+    driverClassName: "com.mysql.cj.jdbc.Driver"
+    username: root
+    password: plmoknijb09
+  jpa:
+    database-platform: org.hibernate.dialect.MySQLDialect
+    hibernate:
+    #      ddl-auto: validate
+    show-sql: true
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: tuanphat17edu@gmail.com
+    password:
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+vnpay:
+  tmnCode: FRKIW639
+  secretKey: OK25EA6UVCYQG0CA3M4BWPW3GZLM3CG1
+  paymentUrl: https://sandbox.vnpayment.vn/paymentv2/vpcpay.html
+  refundUrl: https://sandbox.vnpayment.vn/merchant_webapi/api/transaction
+  returnUrl: https://gaugeable-pulverisable-takisha.ngrok-free.dev/api/payments/vnpay/return
+  ipnUrl: https://gaugeable-pulverisable-takisha.ngrok-free.dev/api/payments/vnpay/ipn
+
+#  security:
+#    user:
+#      name: admin
+#      password: 123456
+jwt:
+  signerKey: "Fx4NoxybRRfHEk5J4Z12C45rxdfAcNGkMehTCQ1qrdY6B/Mw0Ie4E+36zVliXgWN\n"
+  valid-duration: 3600 #in second
+  refreshable-duration: 7200 #in second
